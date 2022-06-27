@@ -1,6 +1,6 @@
 <?php
 
-//task 1
+//Task 1. Найти все положительные элементы массива
 
     $numbers = [1, 4, -7, 12, 8, 12, -3, 1, -11, -1, 0, 0];
     $numbersPos = [];
@@ -13,7 +13,7 @@
     print_r ($numbersPos);
     echo '</pre>';
 
-//task 2
+//Task 2. Найти элементы массива, которые больше среднеарифметического значения, и вывести их индексы
 
     $numbersAver = array_sum ($numbers) / count ($numbers);
     foreach ($numbers as $key => $number){
@@ -23,7 +23,7 @@
     };
     echo '<br>';
 
-//task 3
+//Task 3. Вывести элементы массива, которые больше предыдущего
 
     $numberPrev = max($numbers) + 1;
     foreach ($numbers as $number){
@@ -34,7 +34,7 @@
     }
     echo '<br>';
 
-//task 4
+//Task 4. Определить, есть ли в массиве повторяющиеся элементы
 
     $newArr = [];
     foreach ($numbers as $number){
@@ -49,7 +49,7 @@
     }
     echo '<br>';
 
-//task 5
+//Task 5. Удалить в массиве элементы, которые встречаются более двух раз
 
     $newArr = [];
     foreach ($numbers as $key => $number){
@@ -62,7 +62,7 @@
     print_r ($numbers);
     echo '</pre>';
 
-//task 6
+//Task 6. Определите, является ли массив двумерным
 
     $arr = [
         1,
@@ -84,7 +84,7 @@
         echo 'Не является двумерным';
     };
 
-//task 7
+//Task 7. Вывести таблицу умножения
 ?>
 
 <!DOCTYPE html>
