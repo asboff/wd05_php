@@ -39,7 +39,7 @@
     $newArr = [];
     foreach ($numbers as $number){
         if (in_array($number, $newArr) == true){
-            echo 'Есть повторяющиеся элементы';
+            echo 'Есть повторяющиеся элементыыыыыы';
             break;
         };
         $newArr[] = $number;
