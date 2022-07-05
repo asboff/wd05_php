@@ -3,9 +3,9 @@ include_once 'db_users.php';
 session_start();
 $_SESSION['is_admin'] = 0;
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $login = "'".$_POST['login']."'";
-    $password = "'".md5($_POST['password'])."'";
-    $res = mysqli_query($connection, "SELECT * FROM users WHERE login = $login AND password = $password;");
+    $login = $_POST['login'];
+    $password = md5($_POST['password']);
+    $res = mysqli_query($connection, "SELECT * FROM users WHERE login = '$login' AND password = '$password';");
     $result = mysqli_fetch_all($res, MYSQLI_ASSOC);
     if (empty($result) == false){
         $_SESSION['is_admin'] = 1;
