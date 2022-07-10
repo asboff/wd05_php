@@ -10,8 +10,8 @@ foreach ($_FILES as $key => $file){
     }
     // ренейм файла
     if (file_exists(__DIR__.'/uploads/'.$file['name']) == true){
+        $type = strrchr($file['name'], '.');
         for ($i = 1; $i > 0; $i++){
-            $type = strrchr($file['name'], '.');
             if (file_exists(__DIR__.'/uploads/'.str_replace($type, '', $file['name']).'_'.$i.$type) == true) {
                 continue;
             }
